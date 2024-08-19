@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/encriptar.js"></script>
+    <script src="https://kit.fontawesome.com/adafe4f4e6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/estilo.css">
     <title>Challenge Encriptador</title>
 </head>
 <body>
-    <h1>Challenge Encriptador</h1>
-    <form method="post">
-        <label for="texto">Texto a encriptar:</label>
-        <input type="text" name="texto" id="texto">
-        <input type="text" name="textoEncriptado" id="textoEncriptado">
-        <p id="aviso">Solo letras minusculas y sin acento</p>
-        <input type="button" onclick="encriptar()" value='Encriptar'>
-        <input type="button" onclick="desencriptar()" value='Desencriptar'>
-        <input type="button" onclick="copiar()" value='copiar'>
-    </form>
+    <div class="container">
+        <header>
+            <img src="img/logo.png" alt="logo" id="logo">
+        </header>
+        <div class="input-section">
+            <form method="post">
+                <textarea name="texto" id="texto" placeholder="Ingrese el texto aquí"></textarea>
+                <p id="aviso"><i class="fa-solid fa-circle-info"></i> Sólo letras minúsculas y sin acento</p>
+                <div class="options">
+                    <input type="button" onclick="encriptar()" value='Encriptar' class="btn" id="encriptar">
+                    <input type="button" onclick="desencriptar()" value='Desencriptar' class="btn" id="desencriptar">
+                </div>
+                
+            </form>
+        </div>
+        <div class="output-section">
+            <div class="output-area">
+                <textarea id="textoEncriptado" readonly></textarea>
+                <input type="button" onclick="copiar()" value='Copiar' class="btn-copy">
+            </div>
+            <div class="placeholder">
+                <img src="img/placeholder-image.png" alt="placeholder">
+                <p>Ningún mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>hecho por: Jose Mena</p>
         <a href=""></a>
     </footer>
 </body>
 <script>
+    window.onload = function() {
+        document.getElementById('texto').value = '';
+        document.getElementById('textoEncriptado').value = '';
+    };
+
     function encriptar(){
         var texto = document.getElementById('texto').value;
         var textoEncriptado = encriptarTexto(texto);
@@ -30,9 +54,9 @@
     }
 
     function desencriptar(){
-        var textoEncriptado = document.getElementById('textoEncriptado').value;
+        var textoEncriptado = document.getElementById('texto').value;
         var texto = desencriptarTexto(textoEncriptado);
-        document.getElementById('texto').value = texto;
+        document.getElementById('textoEncriptado').value = texto;
     }
     function copiar(){
         var texto = document.getElementById('textoEncriptado').value;
