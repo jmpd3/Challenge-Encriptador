@@ -9,15 +9,13 @@ Este proyecto es una herramienta sencilla para encriptar y desencriptar texto. P
 - Copia del texto encriptado al portapapeles.
 - Interfaz fácil de usar con validación del texto de entrada.
 
-## Instalación
+## Funcionamiento:
+La letra "e" es convertida para "enter"
+La letra "i" es convertida para "imes"
+La letra "a" es convertida para "ai"
+La letra "o" es convertida para "ober"
+La letra "u" es convertida para "ufat"
 
-1. Clona el repositorio:
-    ```sh
-    git clone https://github.com/tuusuario/challenge-encriptador.git
-    ```
-2. Navega al directorio del proyecto:
-    ```sh
-    cd challenge-encriptador
     ```
 
 ## Uso
