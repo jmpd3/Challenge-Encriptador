@@ -1,47 +1,47 @@
 # Challenge Encriptador
 
-This project is a simple text encryption and decryption tool. It allows users to input text, encrypt it, and then decrypt it back to the original text. The tool also includes a copy feature to easily copy the encrypted text.
+Este proyecto es una herramienta sencilla para encriptar y desencriptar texto. Permite a los usuarios ingresar texto, encriptarlo y luego desencriptarlo de nuevo a su forma original. También incluye una función para copiar fácilmente el texto encriptado.
 
-## Features
+## Características
 
-- Encrypt text using a simple substitution cipher.
-- Decrypt text back to its original form.
-- Copy the encrypted text to the clipboard.
-- User-friendly interface with validation for input text.
+- Encriptación de texto usando un cifrado de sustitución simple.
+- Desencriptación del texto a su forma original.
+- Copia del texto encriptado al portapapeles.
+- Interfaz fácil de usar con validación del texto de entrada.
 
-## Installation
+## Instalación
 
-1. Clone the repository:
+1. Clona el repositorio:
     ```sh
-    git clone https://github.com/yourusername/challenge-encriptador.git
+    git clone https://github.com/tuusuario/challenge-encriptador.git
     ```
-2. Navigate to the project directory:
+2. Navega al directorio del proyecto:
     ```sh
     cd challenge-encriptador
     ```
 
-## Usage
+## Uso
 
-1. Open the `index.html` file in your web browser.
-2. Enter the text you want to encrypt in the textarea.
-3. Click the "Encriptar" button to encrypt the text.
-4. The encrypted text will appear in the output area.
-5. Click the "Desencriptar" button to decrypt the text back to its original form.
-6. Use the "Copiar" button to copy the encrypted text to the clipboard.
+1. Abre el archivo `index.html` en tu navegador web.
+2. Ingresa el texto que deseas encriptar en el área de texto.
+3. Haz clic en el botón "Encriptar" para encriptar el texto.
+4. El texto encriptado aparecerá en el área de salida.
+5. Haz clic en el botón "Desencriptar" para devolver el texto a su forma original.
+6. Usa el botón "Copiar" para copiar el texto encriptado al portapapeles.
 
-## Code Explanation
+## Explicación del Código
 
-### HTML Structure
+### Estructura HTML
 
-- The main container includes an input section for text input and an output section for displaying the encrypted/decrypted text.
-- The `output-area` is initially hidden and will be displayed when text is encrypted or decrypted.
-- The `placeholder` provides a message when no text is found.
+- El contenedor principal incluye una sección de entrada para el texto y una sección de salida para mostrar el texto encriptado/desencriptado.
+- El área de `output-area` está oculta inicialmente y se mostrará cuando el texto sea encriptado o desencriptado.
+- El `placeholder` proporciona un mensaje cuando no se encuentra texto.
 
-### JavaScript Functions
+### Funciones JavaScript
 
-- `encriptar()`: Encrypts the input text and displays the result.
-- `desencriptar()`: Decrypts the input text and displays the result.
-- `copiar()`: Copies the encrypted text to the clipboard.
-- `comprobarValidez(t)`: Validates the input text to ensure it meets the criteria (lowercase letters, no accents, no special characters).
-- `encriptarTexto(valor)`: Performs the encryption by replacing specific characters.
-- `desencriptarTexto(valor)`: Reverts the encryption by replacing the encoded characters back to their original form.
+- `encriptar()`: Encripta el texto ingresado y muestra el resultado.
+- `desencriptar()`: Desencripta el texto encriptado y muestra el resultado.
+- `copiar()`: Copia el texto encriptado al portapapeles.
+- `comprobarValidez(t)`: Valida el texto de entrada para asegurar que cumple con los criterios (letras minúsculas, sin acentos ni caracteres especiales).
+- `encriptarTexto(valor)`: Realiza la encriptación reemplazando caracteres específicos.
+- `desencriptarTexto(valor)`: Revierte la encriptación reemplazando los caracteres codificados a su forma original.
