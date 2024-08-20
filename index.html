@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/encriptar.js"></script>
-    <script src="https://kit.fontawesome.com/adafe4f4e6.js" crossorigin="anonymous"></script>
+    <script src="https:kit.fontawesome.com/adafe4f4e6.js" crossorigin="anonymous"></script>
+    <script src="js/logica.js"></script>
     <link rel="stylesheet" href="styles/estilo.css">
     <title>Challenge Encriptador</title>
      
@@ -17,10 +17,10 @@
         <div class="input-section">
             <form method="post">
                 <textarea name="texto" id="texto" placeholder="Ingrese el texto aquí"></textarea>
-                <p id="aviso"><i class="fa-solid fa-circle-info"></i> Sólo letras minúsculas y sin acento</p>
+                <p id="aviso"><i class="fa-solid fa-circle-info"></i> Sólo letras minúsculas, sin acentos ni carácteres especiales</p>
                 <div class="options">
-                    <input type="button" onclick="encriptar()" value='Encriptar' class="btn" id="encriptar">
-                    <input type="button" onclick="desencriptar()" value='Desencriptar' class="btn" id="desencriptar">
+                    <input type="button" onclick="encriptar()" value='Encriptar' class="btn" id="encriptar-btn">
+                    <input type="button" onclick="desencriptar()" value='Desencriptar' class="btn" id="desencriptar-btn">
                 </div>
                 
             </form>
@@ -31,8 +31,8 @@
                 <input type="button" onclick="copiar()" value='Copiar' class="btn-copy">
             </div>
             <div class="placeholder">
-                <img src="img/placeholder-image.png" alt="placeholder">
-                <p>Ningún mensaje fue encontrado</p>
+                <img src="img/Muñeco.png" alt="placeholder">
+                <h1>Ningún mensaje fue encontrado</h4>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </div>
@@ -41,27 +41,8 @@
         <p>hecho por: Jose Mena</p>
         <a href=""></a>
     </footer>
+    <script>
+    </script>
 </body>
-<script>
-    window.onload = function() {
-        document.getElementById('texto').value = '';
-        document.getElementById('textoEncriptado').value = '';
-    };
 
-    function encriptar(){
-        var texto = document.getElementById('texto').value;
-        var textoEncriptado = encriptarTexto(texto);
-        document.getElementById('textoEncriptado').value = textoEncriptado;
-    }
-
-    function desencriptar(){
-        var textoEncriptado = document.getElementById('texto').value;
-        var texto = desencriptarTexto(textoEncriptado);
-        document.getElementById('textoEncriptado').value = texto;
-    }
-    function copiar(){
-        var texto = document.getElementById('textoEncriptado').value;
-        navigator.clipboard.writeText(texto);
-    }
-</script>
 </html>
