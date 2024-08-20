@@ -12,7 +12,6 @@ function encriptar(){
     if (usado==false)
     {
         usado=true;
-        alert('1, true');
         document.querySelector('.output-area').style.display = 'block';
         document.querySelector('.placeholder').style.display='none';
     }
@@ -25,8 +24,20 @@ function encriptar(){
 
 function desencriptar(){
     var textoEncriptado = document.getElementById('texto').value;
-    var texto = desencriptarTexto(textoEncriptado);
-    document.getElementById('textoEncriptado').value = texto;
+    if(comprobarValidez(textoEncriptado)){
+        var texto = desencriptarTexto(textoEncriptado);
+        document.getElementById('textoEncriptado').value = texto;
+        if (usado==false)
+        {
+            usado=true;
+         
+            document.querySelector('.output-area').style.display = 'block';
+            document.querySelector('.placeholder').style.display='none';
+        }
+            document.getElementById('aviso').style.color = '#777777';
+        }
+        else document.getElementById('aviso').style.color = 'red';
+        
     
 }
 function copiar(){
@@ -38,7 +49,7 @@ function comprobarValidez(t)
     if (t==t.toLowerCase())
     {
         const regex = /^[a-zA-Z0-9\s]+$/;
-        alert(`2, ${!regex.test(t)}`)
+        
         return regex.test(t);
     }
     else return false;
